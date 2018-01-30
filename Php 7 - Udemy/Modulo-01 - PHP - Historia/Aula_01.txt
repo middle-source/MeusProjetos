@@ -1,0 +1,13 @@
+
+HISTORIA DO PHP
+
+- Criador Rasmus Lerdorf 1994 - Personal Home Page
+- Versão 3 PHP - 1998 10% dos servidores Web estava rodando PHP 
+- Andi Gutmans e Zeev Zuraski - Zend 4, 5
+- 2000 - Versão 4 PHP 
+- 5.3 5.6  Versões Comuns
+- Versão 6 Não Existe
+- 7.0 - Recursos Novos
+
+- Principais Versões 5.3, 5.6, 7.0 e 7.1
+- Certificações Zend

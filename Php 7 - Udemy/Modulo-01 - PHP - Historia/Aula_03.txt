@@ -1,0 +1,13 @@
+- CLI / SERV
+
+- CLI = CLIENTE
+- SERV = SERVIDOR
+
+
+
+- NAVEGADOR - CLI
+- EX: www.google.com.br esta alocado em um servidor - SERV 
+
+- REQUEST - RESPONSE
+
+0

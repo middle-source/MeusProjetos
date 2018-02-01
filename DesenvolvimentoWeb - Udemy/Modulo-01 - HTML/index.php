@@ -7,7 +7,11 @@
         <title>Modulo 01 - HTML</title>
     </head>
     <body>
-    
+        Esse é um <b>Texto </b>Web.
+        <pre>
+            Allan Cristian
+        
+        </pre>
     
     </body>
 </html>

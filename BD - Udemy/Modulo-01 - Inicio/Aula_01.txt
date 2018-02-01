@@ -1,0 +1,13 @@
+-- TIPAGEM DE DADOS PARA MELHORAR O DESEMPENHO
+-- O QUE È BANCO DE DADOS
+-- DBA, BI E DATA SCIENCE E BIG DATA
+
+
+
+    PADRÃO MVC
+
+      VIEW          CONTROLLER          MODEL
+        |               |                 |
+        |               |                 |
+        |               |                 |
+    FRONT END       BACK END       BANCO DE DADOS

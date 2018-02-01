@@ -4,14 +4,9 @@
         <meta charset = "utf-8" />
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
         <meta name = "X-UA-Compatible" content = "ie=edge" />
-        <title>Modulo 01 - HTML</title>
+        <title>Projeto JM Viagens - Primeiro</title>
     </head>
     <body>
-        Esse é um <b>Texto </b>Web.
-        <pre>
-            Allan Cristian
-        
-        </pre>
-    
+
     </body>
 </html>

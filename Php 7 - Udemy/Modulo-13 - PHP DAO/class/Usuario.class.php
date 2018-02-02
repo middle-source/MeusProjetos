@@ -61,11 +61,12 @@
 
 
             if(count($results) > 0) {
-                $row = $results[0];
-                $this -> setIdusuario($row['id_usuario']);
-                $this -> setDeslogin($row['deslogin']);
-                $this -> setDessenha($row['dessenha']);
-                $this -> setDtcadastro($row['dtcadastro']);
+                // $row = $results[0];
+                // $this -> setIdusuario($row['id_usuario']);
+                // $this -> setDeslogin($row['deslogin']);
+                // $this -> setDessenha($row['dessenha']);
+                // $this -> setDtcadastro($row['dtcadastro']);
+                $this -> setData($results[0]);
             }
         }
 
@@ -99,19 +100,43 @@
             ));
 
             if(count($results) > 0) {
-                $row = $results[0];
-                $this -> setIdusuario($row['id_usuario']);
-                $this -> setDeslogin($row['deslogin']);
-                $this -> setDessenha($row['dessenha']);
-                $this -> setDtcadastro($row['dtcadastro']);
+                $this -> setData($results[0]);
             } else {
                 throw new Exception ("Login e/ou senha invalidos. ");
             }
         }
     /* FIM Autenticar Login */
 
+    /* Setar Dados */
+        public function setData($data) {
+            $this -> setIdusuario($data['id_usuario']);
+            $this -> setDeslogin($data['deslogin']);
+            $this -> setDessenha($data['dessenha']);
+            $this -> setDtcadastro(new DateTime($data['dtcadastro']));
+        }
 
+    /* Fim Setar Dados */
+
+    /* Inserir Dados no Banco */
+        public function insert() {
+            $Conn = new Conn();
+            $results = $Conn -> select("CALL sp_usuarios_insert(:login_name, :login_password)", array(
+                ":login_name" => $this -> getDeslogin(),
+                ":login_password" => $this -> getDessenha()
+            ));
+
+            if(count($results) > 0) {
+                $this -> setData($results[0]);
+            }
+        }
+    /* Fim Inserir Dados no Banco */
     
+    /* Metodo Construtor Login */
+        public function __construct($Login = '' , $Password = '') {
+            $this -> setDeslogin($Login);
+            $this -> setDessenha($Password);
+        }
+    /* Fim Metodo Construtor Login */
 
     /* Metodo para retornar dados JSON */
 

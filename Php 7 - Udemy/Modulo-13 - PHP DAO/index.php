@@ -24,8 +24,16 @@
     /* FIM Carrega uma lista de usuarios buscando pelo Login */
 
     /* Verifica Usuario e senha */
-        $usuario = new Usuario();
-        $usuario -> Login("g0055968", "g0055968");
-        echo $usuario;
+        // $usuario = new Usuario();
+        // $usuario -> Login("g0055968", "g0055968");
+        // echo $usuario;
     /* Fim Verifica Usuario e senha */
+
+    /* Insere com uma Procedure */
+        $User = new Usuario("a0065202", "a0065202");
+        $User -> insert();
+        echo $User;    
+    /* Fim Insere com uma Procedure */
+
+
 ?>

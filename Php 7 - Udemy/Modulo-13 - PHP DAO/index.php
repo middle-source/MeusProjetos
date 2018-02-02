@@ -6,8 +6,26 @@
 
     // echo json_encode($usuarios);
 
-    $usuario = new Usuario();
-    $usuario -> loadById(7);
+    /* Carrega um usuario */
+        // $usuario = new Usuario();
+        // $usuario -> loadById(7);
 
-    echo $usuario;
+        // echo $usuario;
+    /* FIM Carrega um usuario */
+
+    /* Carrega uma lista de Usuario */
+        // $Lista = Usuario::getList();
+        // echo json_encode($Lista);
+    /* Carrega uma lista de Usuario */
+
+    /* Carrega uma lista de usuarios buscando pelo Login */
+        // $Search = Usuario::search("g005");
+        // echo json_encode($Search);
+    /* FIM Carrega uma lista de usuarios buscando pelo Login */
+
+    /* Verifica Usuario e senha */
+        $usuario = new Usuario();
+        $usuario -> Login("g0055968", "g0055968");
+        echo $usuario;
+    /* Fim Verifica Usuario e senha */
 ?>

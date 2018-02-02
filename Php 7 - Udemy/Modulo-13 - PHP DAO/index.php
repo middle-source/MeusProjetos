@@ -39,12 +39,22 @@
     /* Fim Insere com uma Procedure */
     
     /* Atualiza (Update) Tabela */
-        $User = new Usuario();
-        $User -> loadById(19);
-        $User -> update("Professor", "2010");
+        // $User = new Usuario();
+        // $User -> loadById(19);
+        // $User -> update("Professor", "2010");
 
-        echo $User;
+        // echo $User;
     /* Fim Atualiza (Update) Tabela */
 
+    /* Deletar (delete) Dados */
+        $User = new Usuario();
+        $User -> loadById(7);
+        $User -> delete();
+
+        echo $User;
+
+    /* Fim Deletar (delete) Dados */
+
+    
 
 ?>

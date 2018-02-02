@@ -147,6 +147,20 @@
     
     /* Fim Atualizar (Update) Dados no Banco */
     
+    /* Deletar (Delete) Dados no Banco */
+        public function delete() {
+            $Conn = new Conn();
+            $Conn -> query("DELETE FROM tb_usuarios WHERE id_usuario = :id", array(
+                ":id" => $this -> getIdusuario()
+            ));
+
+            $this -> setIdusuario(0);
+            $this -> setDeslogin("");
+            $this -> setDessenha("");
+            $this -> setDtcadastro(new DateTime());
+        }
+    /* Fim Deletar (Delete) Dados no Banco */
+    
     /* Metodo Construtor Login */
         public function __construct($Login = '' , $Password = '') {
             $this -> setDeslogin($Login);

@@ -130,6 +130,22 @@
             }
         }
     /* Fim Inserir Dados no Banco */
+
+    /* Atualizar (Update) Dados no Banco */
+        public function update($Login, $Password) {
+
+            $this -> setDeslogin($Login);
+            $this -> setDessenha($Password);
+
+            $Conn = new Conn();
+            $Conn -> query("UPDATE tb_usuarios SET deslogin = :login_name, dessenha = :login_password WHERE id_usuario = :id", array(
+                ':login_name' => $this -> getDeslogin(),
+                ':login_password' => $this -> getDessenha(),
+                ':id' => $this -> getIdusuario()
+            ));
+        }
+    
+    /* Fim Atualizar (Update) Dados no Banco */
     
     /* Metodo Construtor Login */
         public function __construct($Login = '' , $Password = '') {

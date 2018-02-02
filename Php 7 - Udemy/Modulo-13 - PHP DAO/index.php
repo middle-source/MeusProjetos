@@ -29,11 +29,22 @@
         // echo $usuario;
     /* Fim Verifica Usuario e senha */
 
+
+
+
     /* Insere com uma Procedure */
-        $User = new Usuario("a0065202", "a0065202");
-        $User -> insert();
-        echo $User;    
+        // $User = new Usuario("a0065202", "a0065202");
+        // $User -> insert();
+        // echo $User;    
     /* Fim Insere com uma Procedure */
+    
+    /* Atualiza (Update) Tabela */
+        $User = new Usuario();
+        $User -> loadById(19);
+        $User -> update("Professor", "2010");
+
+        echo $User;
+    /* Fim Atualiza (Update) Tabela */
 
 
 ?>

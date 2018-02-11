@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Solicitacao</title>
+    </head>
+
+    <body>
+        <h1></h1>
+
+
+        <script>
+            var consulta = new XMLHttpRequest();
+            consulta.open('GET', 'dados.txt');
+            consulta.send();
+            consulta.onreadystatechange = function() {
+                if(consulta.status == 200) {
+                    if(consulta.readyState == 3) {
+                        console.log("CARREGANDO");
+                    }
+
+                    if(consulta.readyState == 4 ) {
+                        console.log(consulta.responseText);
+                    }
+                } else {
+                    console.log("ERROR");
+                }
+
+            }
+            // console.log(consulta);
+        
+        </script>
+    </body>
+</html>

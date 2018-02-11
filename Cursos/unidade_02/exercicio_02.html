@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+        <meta name = "X-UA-Compatible" content = "ie=edge" />
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <button onclick = "CarregarDados()" id = "bot">Botão</button>
+        <div id = "dinamico"></div>
+        <h1></h1>
+
+
+        <script>
+            function CarregarDados() {
+            var ajax;
+                if(window.XMLHttpRequest) {
+                    ajax = new XMLHttpRequest();
+                }  else {
+                    ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                ajax.open('GET', 'dados.txt');
+                
+                ajax.onreadystatechange = function() {
+                    if(ajax.status == 200) {
+                        if(ajax.readyState == 3) {
+                            console.log('Carregando ... ');
+                        }
+
+                        if(ajax.readyState == 4) {
+                            var elemento = document.getElementById('dinamico');
+                            elemento.innerHTML = ajax.responseText;
+                        
+                            var titulo = document.getElementsByTagName('h1');
+                            titulo[0].innerHTML = ajax.responseText;
+                        }
+                    } else {
+                        console.log("Erro na operação ! ");
+                    }
+                }
+                ajax.send();
+            } // Fechar Função  
+        </script>
+    </body>
+</html>

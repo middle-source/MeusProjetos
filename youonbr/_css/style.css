@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url('./../_img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #dcdcdc;
+}
+
+
+.top{margin: 35px auto; width: 80%; }
+.top img{text-align: center;}
+.img-preloader{width: 100%;}
+.img-preloader img{width: 30%; margin-left: 34%;} 
+.body-data{margin: 45px auto; width: 80%; text-align: center;}
+.body-data h1{font-family: 'Roboto', sans-serif; font-size: 2.1em;}
+.body-data h2{margin-top: 30px; font-family: 'Roboto', sans-serif; font-size: 2.9em; color: #00b01a; text-transform: uppercase;}
+.body-data p{font-family: 'Roboto', sans-serif; font-size: 2.0em;  text-transform: uppercase;}
+
+/* INPUT EMAIL */
+    .form-wrapper {margin: 40px auto; background-color: rgba(129, 206, 150, 0.9); -webkit-border-radius: 25px; border-radius: 25px; padding: 6px; position: relative; width: 60%; height: 25px;}
+    .form-wrapper input[type="email"] {
+        background-color: rgba(129, 206, 150, 0.9);
+        border: none;
+        outline: 0;
+        font-size: 1.3em;
+        position: absolute;
+        left: 30px;
+        top: 1.5px;
+        clear: both;
+        width: 60%;
+        height: 35px;
+        border-radius: 25px;
+    }
+    .form-wrapper input[type="submit"] {
+        width: 200px;
+        height: 36px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.0em;
+        outline: 0;
+        border-radius: 25px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #000;
+     }
+     
+     :-moz-placeholder { /* Firefox 18- */
+        color: #000;  
+     }
+     
+     ::-moz-placeholder {  /* Firefox 19+ */
+        color: #000;  
+     }
+     
+     :-ms-input-placeholder {  
+        color: #000;  
+     }
+/* INPUT EMAIL */
+
+footer {width: 80%; margin: 0 auto;}
+footer p{font-family: 'Roboto', sans-serif; font-size: 1.5em; text-align: center;}

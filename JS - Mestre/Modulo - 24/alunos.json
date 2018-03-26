@@ -1,0 +1,9 @@
+[
+    {
+        "nome" : "Allan Cristian",
+        "notas" : [50, 59, 50]
+    }, {
+        "nome" : "Rodrigo Maia",
+        "notas" : [59, 40, 50, 41]
+    }
+]
